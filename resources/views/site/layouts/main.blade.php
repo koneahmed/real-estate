@@ -12,37 +12,37 @@
 <!-- SITE TITLE -->
 <title>Anger Hotel Booking - Hotel Online Booking HTML Template</title>
 <!-- Favicon Icon -->
-<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/favicon.png')}}">
 <!-- Animation CSS -->
-<link rel="stylesheet" href="assets/css/animate.css">	
+<link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
 <!-- Latest Bootstrap min CSS -->
-<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}">
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 <!-- Icon Font -->
-<link href="assets/css/ico-moon.css" rel="stylesheet">
+<link href="{{asset('assets/css/ico-moon.css')}}" rel="stylesheet">
 <!-- Icon Font CSS -->
-<link rel="stylesheet" href="assets/css/ionicons.min.css">
-<link rel="stylesheet" href="assets/css/themify-icons.css">
-<link rel="stylesheet" href="assets/css/linearicons.css">
+<link rel="stylesheet" href="{{asset('assets/css/ionicons.min.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/themify-icons.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/linearicons.css')}}">
 <!-- DatePicker CSS -->
-<link href="assets/css/datepicker.min.css" rel="stylesheet">
+<link href="{{asset('assets/css/datepicker.min.css')}}" rel="stylesheet">
 <!-- FontAwesome CSS -->
-<link rel="stylesheet" href="assets/css/all.min.css">
+<link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}">
 <!--- owl carousel CSS-->
-<link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
-<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
-<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="{{asset('assets/owlcarousel/css/owl.carousel.min.css')}}">
+<link rel="stylesheet" href="{{asset('assets/owlcarousel/css/owl.theme.css')}}">
+<link rel="stylesheet" href="{{asset('assets/owlcarousel/css/owl.theme.default.min.css')}}">
 <!-- Magnific Popup CSS -->
-<link rel="stylesheet" href="assets/css/magnific-popup.css">
+<link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
 <!-- Style CSS -->
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
 <!-- Demo Hosting Style CSS -->
-<link rel="stylesheet" href="css/demo-hotel.css">
-<link rel="stylesheet" id="layoutstyle" href="assets/color/theme-green.css">
+<link rel="stylesheet" href="{{ asset('css/demo-hotel.css')}}">
+<link rel="stylesheet" id="layoutstyle" href="{{    asset('assets/color/theme-green.css')}}">
 
 </head>
 
@@ -62,7 +62,7 @@
       <div class="loader_box loader_box9"></div>
     </div>
 </div>
-<!-- END LOADER --> 
+<!-- END LOADER -->
 
 <!-- START HEADER -->
 <header class="header_wrap dark_skin hover_menu_style4">
@@ -89,7 +89,7 @@
         </div>
     </div>
     <div class="container">
-        <nav class="navbar navbar-expand-lg"> 
+        <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand brand_150X50" href="index-27.html">
                 <img class="logo_light" src="{{asset('logo/logo.jpg')}}" alt="logo"  style="width: 50px; height:50px" width="50px" height="50px" />
                 <img class="logo_dark" src="{{asset('logo/logo.jpg')}}" alt="logo"  style="width: 50px; height:50px" width="50px" height="50px" />
@@ -98,43 +98,43 @@
             <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="ion-android-menu"></span> </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                	
+
                     <li>
-                    	<a class="nav-link active" href="demo-hotel/about.html">Accueil</a>
+                    	<a class="nav-link active" href="#">Accueil</a>
                     </li>
                     <li class="dropdown">
                    		<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Biens</a>
                         <div class="dropdown-menu">
-                            <ul> 
+                            <ul>
                                 <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/gallery.html">Gallery Grid</a></li>
                                 <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/gallery-masonry.html">Gallery Masonry</a></li>
                                 <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/places.html">Places</a></li>
                                 <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/place-detail.html">Place Detail</a></li>
                             </ul>
-                        </div>   
+                        </div>
                     </li>
-                    <li class="dropdown">
+                    {{-- <li class="dropdown">
                     	<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Rooms</a>
                         <div class="dropdown-menu">
-                            <ul> 
+                            <ul>
                                 <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/room.html">Rooms</a></li>
                                 <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/room-right-sidebar.html">Room Right Sidebar</a></li>
                                 <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/room-list-right-sidebar.html">Room List Right Sidebar</a></li>
                                 <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/single-room.html">Single Room</a></li>
                             </ul>
-                        </div>   
-                    </li>
-                   
+                        </div>
+                    </li> --}}
+
                     <li>
                         <a class="nav-link" href="demo-hotel/contact.html">Contact Us</a>
                     </li>
 				</ul>
             </div>
-            
+
         </nav>
     </div>
 </header>
-<!-- END HEADER --> 
+<!-- END HEADER -->
 
 
 @yield('content')
@@ -143,7 +143,7 @@
 
 
 
-<!-- START FOOTER SECTION --> 
+<!-- START FOOTER SECTION -->
 <footer class="footer_dark">
 	<div class="top_footer">
         <div class="container">
@@ -253,33 +253,33 @@
         </div>
     </div>
 </footer>
-<!-- END FOOTER SECTION --> 
+<!-- END FOOTER SECTION -->
 
-<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a> 
+<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
 
-<!-- Latest jQuery --> 
-<script src="assets/js/jquery-1.12.4.min.js"></script> 
-<!-- jquery-ui --> 
+<!-- Latest jQuery -->
+<script src="assets/js/jquery-1.12.4.min.js"></script>
+<!-- jquery-ui -->
 <script src="assets/js/jquery-ui.js"></script>
-<!-- popper min js --> 
+<!-- popper min js -->
 <script src="assets/js/popper.min.js"></script>
-<!-- Latest compiled and minified Bootstrap --> 
-<script src="assets/bootstrap/js/bootstrap.min.js"></script> 
-<!-- owl-carousel min js  --> 
-<script src="assets/owlcarousel/js/owl.carousel.min.js"></script> 
-<!-- magnific-popup min js  --> 
-<script src="assets/js/magnific-popup.min.js"></script> 
-<!-- waypoints min js  --> 
-<script src="assets/js/waypoints.min.js"></script> 
-<!-- parallax js  --> 
-<script src="assets/js/parallax.js"></script> 
-<!-- countdown js  --> 
-<script src="assets/js/jquery.countdown.min.js"></script> 
+<!-- Latest compiled and minified Bootstrap -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- magnific-popup min js  -->
+<script src="assets/js/magnific-popup.min.js"></script>
+<!-- waypoints min js  -->
+<script src="assets/js/waypoints.min.js"></script>
+<!-- parallax js  -->
+<script src="assets/js/parallax.js"></script>
+<!-- countdown js  -->
+<script src="assets/js/jquery.countdown.min.js"></script>
 <!-- fit video  -->
 <script src="assets/js/jquery.fitvids.js"></script>
-<!-- jquery.counterup.min js --> 
+<!-- jquery.counterup.min js -->
 <script src="assets/js/jquery.counterup.min.js"></script>
-<!-- isotope min js --> 
+<!-- isotope min js -->
 <script src="assets/js/isotope.min.js"></script>
 <!-- elevatezoom js -->
 <script src='assets/js/jquery.elevatezoom.js'></script>
@@ -293,7 +293,7 @@
 <script src="assets/js/jquery.parallax-scroll.js"></script>
 <!-- Demo js -->
 <script src="js/demo-hotel.js"></script>
-<!-- scripts js --> 
+<!-- scripts js -->
 <script src="assets/js/scripts.js"></script>
 
 </body>

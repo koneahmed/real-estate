@@ -40,7 +40,7 @@
                                 class="align-middle">Dashboard</span>
                         </a>
                     </li>
-                    {{-- @if(Auth::user()->type == 'client')
+                    @if(Auth::user()->type == 'client')
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="index.html">
                             <i class="align-middle" data-feather="sliders"></i> <span
@@ -48,9 +48,9 @@
                         </a>
                     </li>
                     @endif
-                    @if(Auth::user()->type=='bailleur') --}}
+                    @if(Auth::user()->type=='bailleur' || Auth::user()->type=='admin')
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="index.html">
+                        <a class="sidebar-link" href="{{route('bien.index')}}">
                             <i class="align-middle" data-feather="sliders"></i> <span
                                 class="align-middle">Biens</span>
                         </a>
@@ -61,7 +61,8 @@
                                 class="align-middle">Catégories de biens</span>
                         </a>
                     </li>
-                    {{-- @endif --}}
+                    @endif
+
 
                 </ul>
 
@@ -112,8 +113,14 @@
 
             <main class="content">
                 <div class="container-fluid p-0">
+                    <div class="row mb-2">
 
-                    <h1 class="h3 mb-3">Blank Page</h1>
+                        @include('partials.alerts.welcome')
+                        @include('partials.alerts.danger')
+                        @include('partials.alerts.primary')
+                        @include('partials.alerts.success')
+                    </div>
+                    {{-- <h1 class="h3 mb-3">Blank Page</h1> --}}
 
                     @yield('content')
 

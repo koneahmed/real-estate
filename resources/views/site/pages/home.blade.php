@@ -59,7 +59,7 @@
         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"><i class="linearicons-arrow-right"></i></a>
     </div>
 </section>
-<!-- END SECTION BANNER --> 
+<!-- END SECTION BANNER -->
 
 <!-- START SECTION AVAILABILITY -->
 <section class="pt-sm-0 small_pb">
@@ -127,22 +127,22 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 col-sm-12 animation" data-animation="fadeInUp" data-animation-delay="0.1s">
-                <div class="heading_s2"> 
+                <div class="heading_s2">
 					<h2>Qui sommes nous</h2>
                 </div>
                 <p>KZ immobilier est une entreprise qui met en relation les propriètaires et les potentiels locataires .</p>
                 <p>Nous offrons : </p>
                 <div class="list_style_4 color_blue mb-3">
                     <ul>
-                        <li>Deep Customization Process</li>
-                        <li>Technologies And Innovations consultant</li>
-                        <li>Secured Transactions consultant</li>
-                        <li>Unique Sales Methodoligies</li>
+                        <li>Location </li>
+                        <li>Prets</li>
+                        <li>Vente</li>
+                        {{-- <li>Unique Sales Methodoligies</li> --}}
                     </ul>
                 </div>
                 {{-- <a href="#" class="btn btn-default mt-md-2">Read More</a> --}}
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 animation" data-animation="fadeInUp" data-animation-delay="0.2s"> 
+            <div class="col-lg-6 col-md-12 col-sm-12 animation" data-animation="fadeInUp" data-animation-delay="0.2s">
                 <div class="overlay_bg_50 about_video_img mt-4 mt-lg-0">
             		<img src="{{asset('img/agent-7.jpg')}}" alt="about_img">
                     {{-- <a href="https://www.youtube.com/watch?v=7e90gBu4pas" class="video_popup video_play"><img class="bounce_img" src="{{asset('img/agent-7.jpg')}}" alt="play-icon"></a> --}}
@@ -153,7 +153,7 @@
 </section>
 <!-- END SECTION ABOUT -->
 
-<!-- START SECTION ROOM --> 
+<!-- START SECTION ROOM -->
 <section class="small_pt">
 	<div class="container">
     	<div class="row justify-content-center">
@@ -170,114 +170,52 @@
             </div>
         </div>
     	<div class="row justify-content-center">
-			<div class="col-lg-4 col-md-6">
-            	<div class="item_box animation" data-animation="fadeInUp" data-animation-delay="0.2s">
-                	<div class="item_img">
-                    	<a href="#"><img src="{{asset('img/b1.jpg')}}" alt="room_img1" height="180px"></a>
-                        <div class="room_services">
-                            <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
-                            <i class="fa fa-bath" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="2 Bathrooms" data-original-title="Bathroom"></i>
-                            <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                            <i class="fa fa-tv" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="TV with cable channels" data-original-title="TV"></i>
+            @foreach ($biens as $bien)
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="item_box animation" data-animation="fadeInUp" data-animation-delay="0.2s">
+                        <div class="item_img">
+                            <a href="#"><img src="{{$bien->image}}" alt="room_img1" height="180px"></a>
+                            {{-- <div class="room_services">
+                                <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
+                                <i class="fa fa-bath" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="2 Bathrooms" data-original-title="Bathroom"></i>
+                                <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
+                                <i class="fa fa-tv" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="TV with cable channels" data-original-title="TV"></i>
+                            </div> --}}
+                            <span class="badge badge-success">{{$bien->type_operation}}</span>
                         </div>
-                        <span class="badge badge-success">Location</span>
-                    </div>
-                    <div class="item_info">
-                        <h5><a href="#">2 peices</a></h5>
-                        {{-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p> --}}
-                        <div class="item_foot">
-                            <div class="room_price">
-                                <h4 class="text_default">90.000 F</h4> 
-                                <span>Le loyer</span>
-                            </div>
-                            <div class="item_stars">
-                                <div class="stars">
-                                    <i class="ion-android-star"></i> 
-                                    <i class="ion-android-star"></i> 
-                                    <i class="ion-android-star"></i> 
-                                    <i class="ion-android-star"></i> 
-                                    <i class="ion-android-star-outline"></i> 
+                        <div class="item_info">
+                            <h5><a href="{{route('site.bien.show',$bien->id)}}"> {{$bien->libelle}}</a></h5>
+                            {{-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p> --}}
+                            <div class="item_foot">
+                                <div class="room_price">
+                                    <h4 class="text_default">90.000 F</h4>
+                                    <span>Le loyer</span>
                                 </div>
-                                <span>(4.0 Rating)</span>
-                            </div>
-                        </div>
-                    </div>
-            	</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-            	<div class="item_box animation" data-animation="fadeInUp" data-animation-delay="0.3s">
-                	<div class="item_img">
-                    	<a href="#"><img src="{{asset('img/b2.jpg')}}" alt="room_img2" height="180px"></a>
-                        <div class="room_services">
-                            <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
-                            <i class="fa fa-bath" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="2 Bathrooms" data-original-title="Bathroom"></i>
-                            <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                        </div>
-                    </div>
-                    <div class="item_info">
-                        <h5><a href="#">Studio</a></h5>
-                        {{-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p> --}}
-                        <div class="item_foot">
-                            <div class="room_price">
-                                <h4 class="text_default">70.000 F</h4> 
-                                <span>Le loyer</span>
-                            </div>
-                            <div class="item_stars">
-                                <div class="stars">
-                                    <i class="ion-android-star"></i> 
-                                    <i class="ion-android-star"></i> 
-                                    <i class="ion-android-star-half"></i> 
-                                    <i class="ion-android-star-outline"></i> 
-                                    <i class="ion-android-star-outline"></i> 
+                                <div class="item_stars">
+                                    {{-- <div class="stars">
+                                        <i class="ion-android-star"></i>
+                                        <i class="ion-android-star"></i>
+                                        <i class="ion-android-star"></i>
+                                        <i class="ion-android-star"></i>
+                                        <i class="ion-android-star-outline"></i>
+                                    </div>
+                                    <span>(4.0 Rating)</span> --}}
                                 </div>
-                                <span>(2.5 Rating)</span>
                             </div>
                         </div>
                     </div>
-            	</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-            	<div class="item_box animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                	<div class="item_img">
-                    	<a href="#"><img src="{{asset('img/t1.jpg')}}" alt="room_img3" height="180px"></a>
-                        <div class="room_services">
-                            <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
-                            <i class="fa fa-bath" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="2 Bathrooms" data-original-title="Bathroom"></i>
-                            <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                            <i class="fa fa-tv" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="TV with cable channels" data-original-title="TV"></i>
-                        </div>
-                        <span class="badge badge-danger">A vendre</span>
-                    </div>
-                    <div class="item_info">
-                        <h5><a href="#">Terrain</a></h5>
-                        {{-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p> --}}
-                        <div class="item_foot">
-                            <div class="room_price">
-                                <h4 class="text_default">5.000.000</h4> 
-                                {{-- <span>Per nights</span> --}}
-                            </div>
-                            <div class="item_stars">
-                                <div class="stars">
-                                    <i class="ion-android-star"></i> 
-                                    <i class="ion-android-star"></i> 
-                                    <i class="ion-android-star"></i> 
-                                    <i class="ion-android-star-half"></i> 
-                                    <i class="ion-android-star-outline"></i> 
-                                </div>
-                                <span>(4.5 Rating)</span>
-                            </div>
-                        </div>
-                    </div>
-            	</div>
-           </div>
+                </div>
+            @endforeach
+			{{--  --}}
         </div>
         <div class="row">
-        	<div class="col-12 text-center mt-md-4">	
+        	<div class="col-12 text-center mt-md-4">
             	<a href="{{route('site.result.all')}}" class="btn btn-default">Voir plus</a>
             </div>
         </div>
     </div>
 </section>
-<!-- END SECTION ROOM --> 
+<!-- END SECTION ROOM -->
 
 @endsection

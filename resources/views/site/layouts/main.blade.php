@@ -106,10 +106,12 @@
                    		<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Biens</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/gallery.html">Gallery Grid</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/gallery-masonry.html">Gallery Masonry</a></li>
+                                @foreach (\App\Models\TypeBien::all() as $typeBien)
+                                <li><a class="dropdown-item nav-link nav_item" href="#">{{$typeBien->libelle}}</a></li>
+                                @endforeach
+                                {{-- <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/gallery-masonry.html">Gallery Masonry</a></li>
                                 <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/places.html">Places</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/place-detail.html">Place Detail</a></li>
+                                <li><a class="dropdown-item nav-link nav_item" href="demo-hotel/place-detail.html">Place Detail</a></li> --}}
                             </ul>
                         </div>
                     </li>
@@ -126,7 +128,7 @@
                     </li> --}}
 
                     <li>
-                        <a class="nav-link" href="demo-hotel/contact.html">Contact Us</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
 				</ul>
             </div>

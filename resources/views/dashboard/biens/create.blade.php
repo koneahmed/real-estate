@@ -74,7 +74,8 @@
                                     <select name="operation" id="" required class="form-control">
                                         <option value="">Choisir le type de l'opération</option>
                                         <option value="Vente">Vente</option>
-                                        <option value="Location">Location/reservation</option>
+                                        <option value="Location">Location</option>
+                                        <option value="Réservation">Réservation</option>
                                     </select>
                                 </div>
                             </div>
